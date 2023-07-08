@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
 
 app.post("/", function (req, res) {
     const city = req.body.nameOfCity;
-    const apikey = "<your openweathermap api key>";
+    const apikey = "<your openweathermap api key>";  //you can get an api key by making a free account and then test the app out.
     const unit = req.body.unitOfTemp;
     const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apikey + "&units=" + unit;
     https.get(url, function (response) {
